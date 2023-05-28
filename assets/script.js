@@ -42,6 +42,15 @@ function displayQuestion() {
     questionElement.textContent = question.question;
     choicesElement.innerHTML = "";
 }
+function displayQuestions(){
+    const h1El= document.createElement("h1")
+    h1El.textContent= questions[0].q
+    container.append(h1El)
+    for(let i=0 ; i < questions[0].a.length; i++){
+        const btn= document.createElement("button")
+        btn.textContent= questions[0].a[i]
+        container.append(btn)   
+    }}
     {
         q:"what colour is the sky?",
         a: ["blue","yellow","green","red"],
@@ -64,18 +73,20 @@ function displayQuestion() {
         c: "coral"
     }
 
-
-function displayQuestions(){
-    const h1El= document.createElement("h1")
-    h1El.textContent= questions[0].q
-    container.append(h1El)
-    for(let i=0 ; i < questions[0].a.length; i++){
-        const btn= document.createElement("button")
-        btn.textContent= questions[0].a[i]
-        container.append(btn)   
+// question and answers correct/wrong , end quiz ( score 100 points total)
+function submitQuiz() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+  
+    if (selectedAnswer) {
+      const answer = selectedAnswer.value;
+      const question = questions[currentQuestion];
+  
+      if (answer === question.correctAnswer) {
+        score += 20;
+      } else {
+        score -= 20;
+      }
     }
-}
-
 
 
 
