@@ -7,8 +7,11 @@ const starterBtn = document.querySelector("#starter-btn");
 const scoreboardContainer = document.getElementById("scoreboard-container");
 const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
+// add name to scoreboard
+const nameInput = document.getElementById("name-input");
+const nameForm = document.getElementById("name-form");
 
-// variables 
+// variables ( change the 60 sec timer for longer quiz)
 let currentQuestion = 0;
 let score = 0;
 let timeLeft = 60; 
@@ -46,34 +49,41 @@ function displayQuestions(){
     const h1El= document.createElement("h1")
     h1El.textContent= questions[0].q
     container.append(h1El)
+
     for(let i=0 ; i < questions[0].a.length; i++){
         const btn= document.createElement("button")
         btn.textContent= questions[0].a[i]
         container.append(btn)   
-    }}
+
+        for (let i = 0; i < question.choices.length; i++) {
+            const button = document.createElement("button");
+            const choice = question.choices[i];
+            button.textContent = choice;
+            choicesElement.appendChild(button);
+          }}}
     {
         q:"what colour is the sky?",
-        a: ["blue","yellow","green","red"],
-        c: "blue"
-    },{
+        a; ["blue","yellow","green","red"],
+        c; "blue"
+    }{
         q:"what colour is the sun?",
-        a: ["blue","yellow","white","red"],
-        c: "white"
-    },{
+        a; ["blue","yellow","white","red"],
+        c; "white"
+    }{
         q:"is javascript really dumb",
-        a: ["yes","no","maybe","duh"],
-        c: "duh"
-    },{
+        a; ["yes","no","maybe","duh"],
+        c; "duh"
+    }{
         q:"im out of questions for filler",
-        a: ["one","two","three","four"],
-        c: "one"
-    },{
+        a; ["one","two","three","four"],
+        c; "one"
+    }{
         q:"i could have just copied the same one 5 times i know",
-        a: ["coral","is","very","tired"],
-        c: "coral"
+        a; ["coral","is","very","tired"],
+        c; "coral"
     }
 
-// question and answers correct/wrong , end quiz ( score 100 points total)
+// question and answers correct/wrong  , add or remove points 
 function submitQuiz() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
   
@@ -86,18 +96,18 @@ function submitQuiz() {
       } else {
         score -= 20;
       }
+    
+      currentQuestion++;
+  
+      if (currentQuestion < questions.length) {
+        displayQuestion();
+      } else {
+        endQuiz();
+      }
     }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // end quiz and score board
+  function endQuiz() {
+    quizContainer.style.display = "none";
+    scoreboardContainer.style.display =}
