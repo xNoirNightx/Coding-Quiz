@@ -1,8 +1,12 @@
-// Elements
+// quiz
+const quizContainer = document.getElementById("quiz-container");
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
 const starterBtn = document.querySelector("#starter-btn");
-const container = document.querySelector(".container")
-const questions = [
-
+// score
+const scoreboardContainer = document.getElementById("scoreboard-container");
+const scoreElement = document.getElementById("score");
+const timerElement = document.getElementById("timer");
 
 // variables 
 let currentQuestion = 0;
@@ -24,8 +28,8 @@ function updateTimer() {
       timeLeft--;
     }
   }
-// scoreboard 
 
+// scoreboard 
 nameForm.addEventListener("submit", function(event) {
     event.preventDefault();
     playerName = nameInput.value;
@@ -36,6 +40,11 @@ nameForm.addEventListener("submit", function(event) {
 
 
 // questions 
+function displayQuestion() {
+    const question = questions[currentQuestion];
+    questionElement.textContent = question.question;
+    choicesElement.innerHTML = "";
+}
     {
         q:"what colour is the sky?",
         a: ["blue","yellow","green","red"],
