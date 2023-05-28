@@ -13,10 +13,7 @@ let currentQuestion = 0;
 let score = 0;
 let timeLeft = 60; 
 let playerName = "";
-let
-let
-let
-let
+
 
 // timer
 function updateTimer() {
@@ -54,26 +51,18 @@ function displayQuestion() {
         a: ["blue","yellow","white","red"],
         c: "white"
     },{
-        q:"question question",
-        a: ["blue","yellow","green","red"],
-        c: "blue"
+        q:"is javascript really dumb",
+        a: ["yes","no","maybe","duh"],
+        c: "duh"
     },{
-        q:"input js question?",
-        a: ["blue","yellow","white","red"],
-        c: "white"
+        q:"im out of questions for filler",
+        a: ["one","two","three","four"],
+        c: "one"
     },{
-        q:"input js question?",
-        a: ["blue","yellow","white","red"],
-        c: "white"
+        q:"i could have just copied the same one 5 times i know",
+        a: ["coral","is","very","tired"],
+        c: "coral"
     }
-]
-
-
-function clickHandler() {
-    displayQuestions()
-    startertimer
-    displayScore
-}
 
 
 function displayQuestions(){
@@ -101,5 +90,3 @@ function displayQuestions(){
 
 
 
-
-starterBtn.addEventListener("click", clickHandler)
