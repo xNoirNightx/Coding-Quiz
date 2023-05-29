@@ -1,8 +1,64 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  /* --Quiz container section ** add colour from swatch and background ** -- */
+
+  #start-container, #quiz-container, #score-container, #name-container, #scoreboard-container {
+    display: none;
+  }
+  #start-container {
+    text-align: center;
+  }
+  #start-btn {
+    font-size: 24px;
+  }
+  #quiz-container {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  #choices {
+    list-style-type: none;
+    padding: 0;
+  }
+  #choices button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #submit-btn, #submit-score-btn {
+    margin-top: 10px;
+  }
+  
+/* -- add score board -- */
+
+#score-container 
+  
+#name-container 
+    
+#scoreboard-container 
+  
+#scoreboard 
+  
+#scoreboard li
 
 
+/* --add colour options -- */
+
+
+
+/* --add timer-- */
+#timer

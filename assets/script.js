@@ -1,3 +1,50 @@
+// questions 
+const quizData = [
+    {
+      question: "Question 1:",
+      choices: ["fdg", "Padgfdris", "Rodmdfge", "dfgdfg"],
+      correctAnswer: 2,
+    },
+    {
+      question: "Question 2: ",
+      choices: ["sdf", "sdg", "sdg", "bsbdz"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Question 3: ",
+      choices: ["dfgdfg", "dfgfg", "hdfh", "dfgdf"],
+      correctAnswer: 0,
+    },
+    {
+      question: "Question 4: ",
+      choices: ["dfg", "Afgd", "Cufdg", "Ffdge"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Question 5: ",
+      choices: ["hfdf", "dfg", "ffdgfg", "dfgdfg"],
+      correctAnswer: 1,
+    },
+  ];
+
+  //quiz ( add btn listenrs , **note go in order**)
+  const startContainer = document.getElementById("start-container");
+  const quizContainer = document.getElementById("quiz-container");
+  const questionElement = document.getElementById("question");
+  const choicesElement = document.getElementById("choices");
+
+  //scoreboard ( **note localstorage display)
+  const scoreElement = document.getElementById("score");
+  const nameInput = document.getElementById("name");
+  const submitScoreBtn = document.getElementById("submit-score-btn");
+  const scoreboardElement = document.getElementById("scoreboard");
+  const timerElement = document.getElementById("timer");
+
+  let currentQuestion = 0;
+  let score = 0;
+  let timeLeft = 60; // 60 seconds
+  let timer;
+
 // quiz
 
 
@@ -8,32 +55,6 @@
 // timer
 
 // scoreboard 
-
-
-
-// questions 
-
-    {
-        q:"what colour is the sky?",
-        a; ["blue","yellow","green","red"],
-        c; "blue"
-    }{
-        q:"what colour is the sun?",
-        a; ["blue","yellow","white","red"],
-        c; "white"
-    }{
-        q:"is javascript really dumb",
-        a; ["yes","no","maybe","duh"],
-        c; "duh"
-    }{
-        q:"im out of questions for filler",
-        a; ["one","two","three","four"],
-        c; "one"
-    }{
-        q:"i could have just copied the same one 5 times i know",
-        a; ["coral","is","very","tired"],
-        c; "coral"
-    }
 
 // question and answers correct/wrong  , add or remove points 
 
