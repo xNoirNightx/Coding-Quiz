@@ -6,28 +6,3 @@
 }
 
 
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  #quiz-container {
-    margin: 50px auto;
-    width: 400px;
-  }
-  
-  #choices li {
-    list-style-type: none;
-    margin: 10px 0;
-  }
-  
-  #scoreboard-container {
-    margin-top: 50px;
-  }
-
-

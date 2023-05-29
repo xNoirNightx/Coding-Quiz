@@ -8,32 +8,28 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    
-    <h1>Timed Quiz</h1>
-
-    <div id="quiz-container">
-      <h2 id="question"></h2>
-      <ul id="choices"></ul>
+    <div id="start-container">
+      <h1>Welcome to the Quiz</h1>
+      <button id="start-btn">Start</button>
     </div>
-  
+    <div id="quiz-container">
+      <div id="timer"></div>
+      <div id="question"></div>
+      <ul id="choices"></ul>
+      <button id="submit-btn">Submit</button>
+    </div>
+    <div id="score-container">
+      <h2>Your Score: <span id="score"></span></h2>
+    </div>
+    <div id="name-container">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" autocomplete="off">
+      <button id="submit-score-btn">Submit Score</button>
+    </div>
     <div id="scoreboard-container">
       <h2>Scoreboard</h2>
-      <p>Score: <span id="score">0</span></p>
-      <p id="timer">Time: 0</p>
+      <ul id="scoreboard"></ul>
     </div>
-    
-      <div class="start-btn"><button id="starter-btn"> Start Quiz</button></div>
-    </div>
-
-<!-- Start Quiz -->
-
-
-
-
-
-
-
-
 
 
 
