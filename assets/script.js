@@ -45,7 +45,34 @@ const quizData = [
   let timeLeft = 60; // 60 seconds
   let timer;
 
-// quiz
+// quiz start and timer start ***add count down and minus points **** 
+ function showStartPage() {
+    startContainer.style.display = "block";
+    quizContainer.style.display = "none";
+  }
+  
+  function startQuiz() {
+    startContainer.style.display = "none";
+    quizContainer.style.display = "block";
+    showQuestion();
+    startTimer();
+  }
+// display quiz questions 
+function showQuestion() {
+    const currentQuiz = quizData[currentQuestion];
+    questionElement.textContent = currentQuiz.question;
+    choicesElement.innerHTML = "";
+  
+    for (let i = 0; i < currentQuiz.choices.length; i++) {
+      const choice = currentQuiz.choices[i];
+      const button = document.createElement("button");
+      button.textContent = choice;
+      button.value = i;
+      button.addEventListener("click", selectAnswer);
+      choicesElement.appendChild(button);
+    }
+  }
+
 
 
 // variables ( change the 60 sec timer for longer quiz)
