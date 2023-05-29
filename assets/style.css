@@ -45,15 +45,28 @@ body {
   
 /* -- add score board -- */
 
-#score-container 
+#score-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   
-#name-container 
-    
-#scoreboard-container 
+  #name-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   
-#scoreboard 
+  #scoreboard-container {
+    text-align: center;
+  }
   
-#scoreboard li
+  #scoreboard {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #scoreboard li {
+    margin-bottom: 5px;
+  }
 
 
 /* --add colour options -- */
