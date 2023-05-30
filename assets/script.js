@@ -138,7 +138,17 @@ function endQuiz() {
     document.getElementById("name-container").style.display = "none";
   }
   
- 
+  function showScoreboard() {
+    scoreboardElement.innerHTML = "";
+  
+    const scores = JSON.parse(localStorage.getItem("quizScores")) || [];
+    scores.forEach((score, index) => {
+      if (index < 10) {
+        const li = document.createElement("li");
+        li.textContent = `${score.name}: ${score.score}`;
+        scoreboardElement.appendChild(li);
+      }
+    });
   
     document.getElementById("scoreboard-container").style.display = "block";
   }

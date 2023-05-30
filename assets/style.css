@@ -3,15 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --black--: #000000;
+    ---grey--: #596164;
+    ---grey-lit--: #b1b6ba;
+    --blue--: #3c4c78;
+    ---purple--: #aaacc8;
+}
+header {
+    background-color: black;
+    padding: 40px;
+    color: white;
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 50px;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
   }
   
   h1, h2 {
     text-align: center;
   }
+
   
   /* --Quiz container section ** add colour from swatch and background ** -- */
 
@@ -25,10 +47,11 @@ body {
     font-size: 24px;
   }
   #quiz-container {
-    margin-bottom: 20px;
+    margin-top: 90px;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: var(--blue--);
     padding: 20px;
+    margin: 0%;
   }
   #choices {
     list-style-type: none;
@@ -49,29 +72,45 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
-  
   #name-container {
     text-align: center;
     margin-bottom: 20px;
   }
-  
   #scoreboard-container {
     text-align: center;
   }
-  
   #scoreboard {
     list-style-type: none;
     padding: 0;
   }
-  
   #scoreboard li {
     margin-bottom: 5px;
   }
 
 
-/* --add colour options -- */
-
-
-
 /* --add timer-- */
-#timer
+ #timer {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* --add colour options -- */
+ .correct {
+    background-color: #96f32b;
+  }
+ .wrong {
+    background-color: #f52618;
+  }
+
+  /* footer , add icons ? cat ? */
+  footer {
+    background-color: black;
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+  }
+.footertext p {
+    justify-content: center;
+    text-align: center;
+}
