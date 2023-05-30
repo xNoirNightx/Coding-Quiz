@@ -109,6 +109,7 @@
     if (timeLeft === 0) {
     clearInterval(timer);
     endQuiz();
+    endQuizByTime();
     }}, 1000);
     }
 
@@ -163,6 +164,13 @@ function endQuiz() {
     document.getElementById("scoreboard-container").style.display = "block";
   }
   
+  //scoreboard nav bar function
+  function scrollToTarget(target) {
+    const targetElement = document.getElementById(target);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 // end quiz and score board
  document.getElementById("start-btn").addEventListener("click", startQuiz);

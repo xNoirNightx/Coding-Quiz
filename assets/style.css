@@ -21,6 +21,38 @@ header {
     border: 5px solid  #000;
   }
 
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 10px;
+  }
+  nav ul li a {
+    font-size: larger;
+    color: #3c4c78;
+    text-decoration: none;
+    transition: 2s ease;
+  }
+  nav ul li a:hover {
+    background-color: var(#000000);
+    text-decoration: underline;
+  }
+
+  .scoreboard-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: none;
+  }
+  
+  .scoreboard-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -104,6 +136,11 @@ body {
   }
   #scoreboard-container {
     text-align: center;
+    background: linear-gradient(#3c4c78,#aaacc8,#b1b6ba);
+    margin: 35px;
+    padding: 60px;
+    box-shadow: 0 0 30px #3c4c78;
+    border: 5px solid  #000;
   }
   #scoreboard {
     list-style-type: none;
