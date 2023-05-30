@@ -59,7 +59,7 @@ The following image shows the welcome screen of my quiz.
 
 ## My Githubs
 
-- https://xnoirnightx.github.io/Coding-Quiz/
+- https://xnoirnightx.github.io/Snow-Leopard-Quiz/
 
 ## License
 
