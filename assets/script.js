@@ -13,7 +13,7 @@
 
   let currentQuestion = 0;
   let score = 0;
-  let timeLeft = 60; // 60 seconds
+  let timeLeft = 60; 
   let timer;
 
  // questions 
@@ -72,7 +72,7 @@
       choicesElement.appendChild(button);
     }}
 
- // displayer quiz colours in CSS *correct or wrong answers*
+ // displayer quiz colours in CSS *correct or wrong answers* , adds/removes points.
   function selectAnswer(event) {
     const selectedAnswer = parseInt(event.target.value);
     const currentQuiz = quizData[currentQuestion];
@@ -113,11 +113,20 @@
     }
 
 
-// End the quiz and display the score input field
+// End the quiz after answers
 function endQuiz() {
     clearInterval(timer);
     quizContainer.style.display = "none";
     scoreElement.textContent = `Your Score: ${score}`;
+    document.getElementById("score-container").style.display = "block";
+    document.getElementById("name-container").style.display = "block";
+  }
+
+  // End the quiz no time
+  function endQuizByTime() {
+    clearInterval(timer);
+    quizContainer.style.display = "none";
+    scoreElement.textContent = "Time's up!";
     document.getElementById("score-container").style.display = "block";
     document.getElementById("name-container").style.display = "block";
   }
