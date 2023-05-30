@@ -12,9 +12,13 @@
     ---purple--: #aaacc8;
 }
 header {
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(#3c4c78,#aaacc8,#b1b6ba);
     padding: 40px;
     color: white;
+    box-shadow: 0 0 60px #3c4c78;
+    border: 5px solid  #000;
   }
 
 body {
@@ -27,7 +31,7 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
+    min-height: 100vh;
   }
   
   h1, h2 {
@@ -39,19 +43,33 @@ body {
 
   #start-container, #quiz-container, #score-container, #name-container, #scoreboard-container {
     display: none;
+    margin: 0;
+    padding: 50px;
   }
   #start-container {
     text-align: center;
+    margin: 0;
+    padding: 50px;
   }
   #start-btn {
-    font-size: 24px;
+    background-color: var(--blue--);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 30px #3c4c78;
+    border: 2px solid  #000;
+    transition: 3s ease;
+  }
+  #start-btn:hover {
+    background-color: var(---purple--);
   }
   #quiz-container {
     margin-top: 90px;
     text-align: center;
-    background-color: var(--blue--);
-    padding: 20px;
-    margin: 0%;
+    background: linear-gradient(#3c4c78,#aaacc8,#b1b6ba);
+    margin: 35px;
+    padding: 60px;
+    box-shadow: 0 0 30px #3c4c78;
+    border: 5px solid  #000;
   }
   #choices {
     list-style-type: none;
@@ -62,8 +80,16 @@ body {
     margin-bottom: 10px;
     width: 100%;
   }
+  #submit-btn:hover, #submit-score-btn:hover {
+    background-color: var(--blue--);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 30px #3c4c78;
+    border: 2px solid  #000;
+    transition: 2s ease;
+  }
   #submit-btn, #submit-score-btn {
-    margin-top: 10px;
+    background-color: var(---purple--);
   }
   
 /* -- add score board -- */
@@ -103,9 +129,14 @@ body {
     background-color: #f52618;
   }
 
-  /* footer , add icons ? cat ? */
+  /* footer  */
   footer {
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(#3c4c78,#aaacc8,#b1b6ba);
+    box-shadow: 0 0 30px #3c4c78;
+    border: 5px solid  #000;
     padding: 15px;
     color: white;
     margin-top: auto;
