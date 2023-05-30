@@ -19,29 +19,29 @@
  // questions 
  const quizData = [
     {
-      question: "Question 1:",
-      choices: ["fdg", "Padgfdris", "Rodmdfge", "dfgdfg"],
-      correctAnswer: 2,
-    },
-    {
-      question: "Question 2: ",
-      choices: ["sdf", "sdg", "sdg", "bsbdz"],
+      question: "Question 1: Where do Snow Leopards live?",
+      choices: ["Europe", "Asia", "Brazil", "North America"],
       correctAnswer: 1,
     },
     {
-      question: "Question 3: ",
-      choices: ["dfgdfg", "dfgfg", "hdfh", "dfgdf"],
+      question: "Question 2: About how many Snow Leopards are left in the wild? ",
+      choices: ["4,080-6,590", "2,080-4,590", "6,080-8,590", "5,080-7,590"],
       correctAnswer: 0,
     },
     {
-      question: "Question 4: ",
-      choices: ["dfg", "Afgd", "Cufdg", "Ffdge"],
-      correctAnswer: 1,
+      question: "Question 3: What CANT Snow Leopards do? ",
+      choices: ["roar", "chuffing", "growl", "mew"],
+      correctAnswer: 0,
     },
     {
-      question: "Question 5: ",
-      choices: ["hfdf", "dfg", "ffdgfg", "dfgdfg"],
-      correctAnswer: 1,
+      question: "Question 4: How long are Snow Leopards tails?  ",
+      choices: ["50-75cm long", "70-95cm long", "60-85cm long", "80-105cm long"],
+      correctAnswer: 3,
+    },
+    {
+      question: "Question 5: How far can Snow Leopards leap?",
+      choices: ["upto 5meters", "upto 7meters", "upto 9meters", "upto 4meters"],
+      correctAnswer: 2,
     },];
 
 
@@ -164,16 +164,11 @@ function endQuiz() {
     document.getElementById("scoreboard-container").style.display = "block";
   }
   
-  //scoreboard nav bar function
-  function scrollToTarget(target) {
-    const targetElement = document.getElementById(target);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
 // end quiz and score board
  document.getElementById("start-btn").addEventListener("click", startQuiz);
  submitScoreBtn.addEventListener("click", submitScore);
  
  showStartPage();
+
+ 
+
